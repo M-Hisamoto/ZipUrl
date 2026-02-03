@@ -22,3 +22,8 @@ O **ZipUrl** é uma solução de encurtamento de links desenvolvida em java para
 * **Gestão de Expiração (TTL Index)**: Configuração de índice no MongoDB que deleta automaticamente links após uma semana, otimizando o banco de dados.
 * **Segurança de Credenciais**: Uso de **Externalized Configuration** com variáveis de ambiente para proteger dados sensíveis.
 * **Interface Integrada**: Servindo arquivos estáticos (HTML/CSS/JS) diretamente pelo Tomcat embutido do Spring.
+
+<details>
+    docker compose --env-file .env -f docker/docker-compose.yml up -d
+    docker compose --env-file .env -f docker/docker-compose.yml down
+</details>

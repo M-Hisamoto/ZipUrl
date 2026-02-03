@@ -39,7 +39,7 @@ public class UrlController {
             id = RandomStringUtils.randomAlphanumeric(5, 10);
         } while(urlRepository.existsById(id));
 
-        urlRepository.save(new UrlEntity(id, request.url(), Instant.now().plus(2, ChronoUnit.MINUTES)));
+        urlRepository.save(new UrlEntity(id, request.url(), Instant.now().plus(7, ChronoUnit.DAYS)));
 
         var redirectUrl = servletRequest.getRequestURL().toString().replace("shorten-url", id);
 
